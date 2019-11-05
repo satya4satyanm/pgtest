@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!--
+ Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements.  See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License.  You may obtain a copy of the License at
+ 
+ http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied.  See the License for the
+ specific language governing permissions and limitations
+ under the License.
+ -->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+       
+	   <link rel="stylesheet" type="text/css" href="css/index.css" />
+		
+        <title>Test Ajax and JsonP</title>
+		
+		<script src="js/ms-viewport.js"></script>
+		<!--script type="text/javascript" src="phonegap.js"></script-->
+		<script type="text/javascript" src="js/index.js"></script>
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+		<script src="jquery.jsonp-2.1.4.min.js"></script>
+		
+    </head>
+	
+    <body>
+	<ul id="Headline"> Results</ul>
+	<ul id="result"></ul>
+	
+        <div class="app">
+            <h1>Test IAS</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
+            <div>
+            	<br>
+            	<button class="minimal"  onclick="app.connect();" value="Connect" >Test</button> <br> <br>
+				<button class="clean-gray"  onclick="app.SendRequest(this.value);" value="cars" > Get some Cars</button> <br>
+				<button class="clean-gray"  onclick="app.SendRequest(this.value);" value="bikes" > get some Bikes</button> <br>
+                
+            </div>
+			
+        </div>
+		   
+		
+   
+		<script type="text/javascript">
+            app.initialize();
+			
+        </script>
+		
+		
+
+    
+
+<!--         
+
+            
+            function stub(d) {
+            	console.log(d);
+            }
+			
+			 function onConnect(k)
+			 {
+				console.log('Established connection with ', + k);
+				key = k;
+			}
+
+
+<script type="text/javascript">
+            app.initialize();
+            
+            var host = "10.56.0.62",
+            data = "-- data to be sent --",
+            key = "";
+            
+            function stub(d) {
+            	console.log(d);
+            }
+        
+        function onConnect(k) {
+            console.log('Established connection with ', + k);
+            key = k;
+        }
+        
+        function connect() {
+			console.log('Try to connect');
+			navigator.notification.vibrate(200);
+            window.tlantic.plugins.socket.connect(onConnect, stub, host, 18002);
+            //window.tlantic.plugins.socket.connect(stub, stub, host, 18004);
+        }
+        
+        function send() {
+            window.tlantic.plugins.socket.send(stub, stub, key, data);
+        }
+        
+        function disconnect() {
+            window.tlantic.plugins.socket.disconnect(stub, stub, key);
+        }
+        
+        function disconnectAll() {
+            window.tlantic.plugins.socket.disconnectAll(stub, stub);
+        }
+        
+        function isConnected() {
+            window.tlantic.plugins.socket.isConnected(key, stub, stub);
+        }
+        
+        document.addEventListener('SOCKET_RECEIVE_DATA_HOOK', function (ev) {
+                                  console.log('Data has been received: ', JSON.stringify(ev.metadata));
+                                  
+                                  alert(ev.metadata.data);
+                                  
+                                  var p = JSON.parse(ev.metadata.data);
+                                  console.log(p);
+                                  
+                                  }
+								  ); -->
+    </body>
+</html>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.adobe.phonegap.app" version="1.3.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>JSON AJAX Test</name>
+    <description>
+      A Sample Projekt that send data to a server and list the json objekts that the server is responding to a list. XAMPP or an other Servfer has to be setup and the index.php in the AJAX_test folder used to as requested target. For XAMMP remove all data out of the htdocs folder and put the index.php in it.  
+	  </description>
+    <author email="jarndt" >
+      Jsoua Arndt
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+</widget>
