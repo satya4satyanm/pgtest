@@ -60,68 +60,7 @@
 		
    
 		<script type="text/javascript">
-          
-                   
-            function stub(d) {
-            	console.log(d);
-            }
-			
-			 function onConnect(k)
-			 {
-				console.log('Established connection with ', + k);
-				key = k;
-			}
-
-
-            app.initialize();
-            
-            var host = "10.56.0.62",
-            data = "-- data to be sent --",
-            key = "";
-            
-            function stub(d) {
-            	console.log(d);
-            }
-        
-        function onConnect(k) {
-            console.log('Established connection with ', + k);
-            key = k;
-        }
-        
-        function connect() {
-			console.log('Try to connect');
-			navigator.notification.vibrate(200);
-            window.tlantic.plugins.socket.connect(onConnect, stub, host, 18002);
-            //window.tlantic.plugins.socket.connect(stub, stub, host, 18004);
-        }
-        
-        function send() {
-            window.tlantic.plugins.socket.send(stub, stub, key, data);
-        }
-        
-        function disconnect() {
-            window.tlantic.plugins.socket.disconnect(stub, stub, key);
-        }
-        
-        function disconnectAll() {
-            window.tlantic.plugins.socket.disconnectAll(stub, stub);
-        }
-        
-        function isConnected() {
-            window.tlantic.plugins.socket.isConnected(key, stub, stub);
-        }
-        
-        document.addEventListener('SOCKET_RECEIVE_DATA_HOOK', function (ev) {
-                                  console.log('Data has been received: ', JSON.stringify(ev.metadata));
-                                  
-                                  alert(ev.metadata.data);
-                                  
-                                  var p = JSON.parse(ev.metadata.data);
-                                  console.log(p);
-                                  
-                                  }
-                                  ); 
-                                  
+          app.initialize();
                                 </script>
     </body>
 </html>
